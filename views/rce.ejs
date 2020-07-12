@@ -1,0 +1,30 @@
+<%- include("header") -%>
+<div class="title-container">
+    <h1>CraftCMS Seomatic RCE</h1>
+</div>
+<div class="container center" id="rceSeomatic">
+    <form method="post" action="">
+        <div class="row">
+            <div class="col"><input type="text" name="target" placeholder="http://target.com/path/" value="<%= url %>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="text" name="command" placeholder="ls -la"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <pre><%- output %></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="submit" value="EXPLOIT"></div>
+        </div>
+        <div class="row">
+            <div class="col"><span>ref : <a
+                        href="https://github.com/giany/CVE/blob/master/CVE-2020-9757.txt">https://github.com/giany/CVE/blob/master/CVE-2020-9757.txt</a></span>
+            </div>
+        </div>
+    </form>
+    </table>
+</div>
+<%- include("footer") -%>
